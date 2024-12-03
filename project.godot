@@ -1,0 +1,189 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "ClickBaseObj",
+"class": "BaseHumitureIcon",
+"language": "GDScript",
+"path": "res://_Scripts/Building/BaseHumitureIcon.gd"
+}, {
+"base": "ClickBaseObj",
+"class": "BaseInsectPestSituation",
+"language": "GDScript",
+"path": "res://_Scripts/Building/BaseInsectPestSituation.gd"
+}, {
+"base": "Spatial",
+"class": "BasePillar",
+"language": "GDScript",
+"path": "res://_Scripts/Building/BasePillar.gd"
+}, {
+"base": "ClickBaseObj",
+"class": "BaseProbe",
+"language": "GDScript",
+"path": "res://_Scripts/Building/BaseProbe.gd"
+}, {
+"base": "Spatial",
+"class": "BaseStack",
+"language": "GDScript",
+"path": "res://_Scripts/Building/BaseStack.gd"
+}, {
+"base": "Spatial",
+"class": "Base_Building",
+"language": "GDScript",
+"path": "res://_Scripts/Building/Base_Building.gd"
+}, {
+"base": "Spatial",
+"class": "Base_Cam_Pos",
+"language": "GDScript",
+"path": "res://_CommonScripts/CameraPos/Base_Cam_Pos.gd"
+}, {
+"base": "Spatial",
+"class": "Base_Floor",
+"language": "GDScript",
+"path": "res://_Scripts/Building/Base_Floor.gd"
+}, {
+"base": "CanvasItem",
+"class": "Base_Panel",
+"language": "GDScript",
+"path": "res://_CommonScripts/UIFramework/Base/Base_Panel.gd"
+}, {
+"base": "Node",
+"class": "Building_Manager",
+"language": "GDScript",
+"path": "res://_Scripts/Building/Building_Manager.gd"
+}, {
+"base": "Camera",
+"class": "CamMove",
+"language": "GDScript",
+"path": "res://_CommonScripts/CameraMove/CamMove.gd"
+}, {
+"base": "Node",
+"class": "Cam_Pos_Manager",
+"language": "GDScript",
+"path": "res://_CommonScripts/CameraPos/Cam_Pos_Manager.gd"
+}, {
+"base": "Spatial",
+"class": "ClickBaseObj",
+"language": "GDScript",
+"path": "res://_CommonScripts/ClickObj/ClickBaseObj.gd"
+}, {
+"base": "Base_Floor",
+"class": "Clickable_Floor",
+"language": "GDScript",
+"path": "res://_Scripts/Building/Clickable_Floor.gd"
+}, {
+"base": "Node",
+"class": "Clickable_Stack",
+"language": "GDScript",
+"path": "res://_Scripts/Building/Clickcble_Stack.gd"
+}, {
+"base": "Base_Cam_Pos",
+"class": "FPSViewPos",
+"language": "GDScript",
+"path": "res://_Scripts/CamPos/FPSViewPos.gd"
+}, {
+"base": "Base_Cam_Pos",
+"class": "FixViewPos",
+"language": "GDScript",
+"path": "res://_Scripts/CamPos/FixViwePos.gd"
+}, {
+"base": "FixViewPos",
+"class": "GardenFixViewPos",
+"language": "GDScript",
+"path": "res://_Scripts/CamPos/GardenFixViewPos.gd"
+}, {
+"base": "Node",
+"class": "JsManager",
+"language": "GDScript",
+"path": "res://_Scripts/JsCommunicateWithGodot/JsManager.gd"
+}, {
+"base": "Base_Panel",
+"class": "MainPanel",
+"language": "GDScript",
+"path": "res://_Scripts/UIPanel/MainPanel.gd"
+}, {
+"base": "Node",
+"class": "Scene_Obj_ID_Tool",
+"language": "GDScript",
+"path": "res://_Scripts/SceneObjIDTool/Scene_Obj_ID_Tool.gd"
+}, {
+"base": "Control",
+"class": "UI_Manager",
+"language": "GDScript",
+"path": "res://_CommonScripts/UIFramework/Base/UI_Manager.gd"
+} ]
+_global_script_class_icons={
+"BaseHumitureIcon": "",
+"BaseInsectPestSituation": "",
+"BasePillar": "",
+"BaseProbe": "",
+"BaseStack": "",
+"Base_Building": "",
+"Base_Cam_Pos": "",
+"Base_Floor": "",
+"Base_Panel": "",
+"Building_Manager": "",
+"CamMove": "",
+"Cam_Pos_Manager": "",
+"ClickBaseObj": "",
+"Clickable_Floor": "",
+"Clickable_Stack": "",
+"FPSViewPos": "",
+"FixViewPos": "",
+"GardenFixViewPos": "",
+"JsManager": "",
+"MainPanel": "",
+"Scene_Obj_ID_Tool": "",
+"UI_Manager": ""
+}
+
+[application]
+
+config/name="Bao Ji 3 . 5"
+run/main_scene="res://Baoji/TSCN/MainScene.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+BuildingManager="*res://_Scripts/Building/Building_Manager.gd"
+UIManager="*res://_CommonScripts/UIFramework/Base/UIManager.tscn"
+CamPosManager="*res://_CommonScripts/CameraPos/Cam_Pos_Manager.gd"
+GameManager="*res://_Scripts/GameManager/Game_Manager.gd"
+JSManagerInstance="*res://_Scripts/JsCommunicateWithGodot/JsManager.gd"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+
+[global]
+
+colli=false
+qua=false
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[input]
+
+ui_accept={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777221,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777222,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+quality/filters/msaa=4
+environment/default_environment="res://default_env.tres"
